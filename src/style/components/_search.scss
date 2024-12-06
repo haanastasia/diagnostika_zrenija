@@ -1,0 +1,30 @@
+.search {
+    &-mini {
+
+        &__icon {
+            cursor: pointer;
+            width: 61px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            background-color: $primary-color-active;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100vw / 2);
+            height: 100%;
+            background-color: $primary-color-active;
+            top: 0;
+            right: 0px;
+        }
+    }
+}

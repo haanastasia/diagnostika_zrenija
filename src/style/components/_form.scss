@@ -1,0 +1,142 @@
+.form {
+    &__control {
+        padding: 15px 30px;
+        border-radius: 26px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        border: 1px solid $primary-color;
+        outline: none;
+
+        &::placeholder {
+            color: $text-primary;
+        }
+
+        &:hover {
+            border-color: $primary-color-active;
+        }
+
+        &:focus {
+            border-color: $primary-color-active;
+            box-shadow: 0 2px 6px 0 rgba(132, 199, 55, 0.1);
+        }
+    }
+
+    &__line {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        bottom: 100%;
+        left: 0px;
+        width: 100%;
+        clear: both;
+        font-size: 10px;
+        font-weight: 700;
+        color: red;
+    }
+
+    &__label {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    &__button {
+        padding: 15px 30px;
+        border-radius: 26px;
+    }
+
+    &__licence {
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &-subscription {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        min-width: 408px;
+        max-width: 408px;
+
+        &__control {
+            margin-right: 15px;
+        }
+    }
+
+    &-contact {
+        &__control {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .form {
+        &__control {
+            padding: 10px 25px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        &-subscription {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: -10px;
+            min-width: inherit;
+            max-width: 370px;
+            width: 100%;
+
+            &__control {
+                margin-right: 0px;
+            }
+        }
+
+        &__button {
+            padding: 10px 25px;
+            margin-bottom: 10px;
+        }
+
+        &__form-group {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: $xs) {
+    .form {
+        &__label {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        &__licence {
+            font-size: 12px;
+        }
+
+        &-subscription {
+            flex-direction: column;
+            justify-content: center;
+            max-width: 250px;
+            margin: auto;
+
+            &__control {
+                width: 100%;
+            }
+
+            .form__button {
+                width: 100%;
+            }
+        }
+    }
+}

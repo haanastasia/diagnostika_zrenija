@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    src: url("../fonts/ProximaNova-Regular.woff") format("woff");
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    src: url("../fonts/ProximaNova-Bold.woff") format("woff");
+    font-display: auto;
+}
+
+$font-primary: "Proxima Nova";
+
+* {
+    font-family: $font-primary;
+    color: $text-primary;
+}
+
+h1,
+.headline {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 60px;
+}
+
+h2,
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: $space;
+}
+
+h3,
+.subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.prompt {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.6;
+}
+
+p {
+    font-size: 18px;
+    line-height: $space;
+    margin-bottom: $space;
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+a {
+    color: $primary-color;
+
+    &:hover {
+        color: $primary-color-active;
+        text-decoration: none;
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+.checkbox {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+
+    &:checked {
+        & + .checkbox__icon {
+            background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__text {
+        display: block;
+        width: calc(100% - 30px);
+        padding-left: 15px;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: $primary-color;
+    }
+}
+
+.text {
+    &--highlight {
+        color: #76b72a;
+    }
+
+    ul,
+    ol {
+        font-size: 18px;
+        line-height: $space;
+        margin-bottom: $space;
+    }
+
+    ul,
+    ol {
+        list-style-position: outside;
+        padding-left: 24px;
+    }
+
+    ul:last-child,
+    ol:last-child {
+        margin-bottom: 0px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: $md) {
+    h1,
+    .headline {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    h2,
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3,
+    .subtitle {
+        font-size: 17px;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .prompt {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text {
+        ul,
+        ol {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .checkbox {
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    
+    p,
+    .prompt {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .text {
+        ul,
+        ol {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}

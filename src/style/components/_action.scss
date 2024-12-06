@@ -1,0 +1,90 @@
+.action {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__item {
+        position: relative;
+
+        a {
+            display: block;
+            padding-top: 14px;
+            padding-right: 15px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            svg {
+                animation: wiggle 1.5s infinite;
+            }
+        }
+    }
+
+    &__count {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: $primary-color;
+        width: 23px;
+        height: 23px;
+        border-radius: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media (max-width: $lg) {
+    .action {
+        &__item:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .action {
+        &__item {
+            a {
+                padding-top: 8px;
+                padding-right: 8px;
+            }
+            svg {
+                height: 20px;
+                width: 22px;
+            }
+        }
+
+        &__count {
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .action {
+        &__item {
+            svg {
+                height: 15px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 7px;
+            }
+        }
+
+
+    }
+}

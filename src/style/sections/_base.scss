@@ -1,0 +1,14 @@
+.section {
+    padding: 60px 0px;
+
+    &--highlight {
+        background-color: $second-color;
+    }
+}
+
+@media (max-width: $md) {
+
+    .section {
+        padding: 50px 0px;
+    }
+}

@@ -1,0 +1,44 @@
+.widget {
+    &-phone {
+        max-width: 135px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+
+        .phone {
+            color: $text-primary;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 30px;
+        
+            &:hover {
+                color: $primary-color-active;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .widget {
+        &-phone {
+            .phone {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@media (max-width: $xs) {
+    .widget {
+        &-phone {
+            .phone {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.faq {
+    &__wrapper {
+        border-radius: 20px;
+        border: 1px solid $stroke-color;
+        background: $second-color;
+        overflow: hidden;
+        margin-bottom: $space;
+    }
+
+    &__picture {
+        min-width: 480px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__content {
+        padding: $space calc($space + 20px) $space $space;
+    }
+}
+
+@media (max-width: $md) {
+    .faq {
+        &__picture {
+            min-width: 280px;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .faq {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            padding: 25px;
+        }
+
+        &__picture {
+            width: 100%;
+
+            img {
+                max-height: 350px;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+}

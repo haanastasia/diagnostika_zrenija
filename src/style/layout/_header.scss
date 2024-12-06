@@ -1,0 +1,131 @@
+.header {
+    &__logo {
+        width: 200px;
+    }
+
+    &__col {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 512px;
+    }
+
+    &-group {
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+
+            &:not(:last-child) {
+                border-right: 1px solid $second-color;
+            }
+
+            &--logo {
+                padding-right: 13px;
+                width: 20%;
+            }
+
+            &--info {
+                width: 50%;
+            }
+
+            &--contact {
+                width: 30%;
+            }
+        }
+    }
+
+    &__wrapper {
+        &-nav {
+            position: relative;
+            background-color: #6eb744;
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: stretch;
+                align-content: stretch;
+            }
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .header {
+        &-group__item {
+            padding: 20px 15px;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .header {
+        &-group__item {
+            padding: 15px;
+
+            &--contact {
+                width: 45%;
+            }
+
+            &--info {
+                width: 35%;
+
+                .button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .header {
+        &-group__item {
+            padding: 10px;
+
+            &--logo {
+                width: 35%;
+            }
+
+            &--contact {
+                width: 65%;
+                max-width: 235px;
+            }
+
+            &--info {
+                display: none;
+            }
+        }
+        &__navbar-toggler {
+            background: $primary-color-active;
+        }
+    }
+}
+
+@media (max-width: $xs) {
+    .header {
+        &-group__item {
+            padding: 8px;
+
+            &--logo {
+                width: 30%;
+            }
+
+            &--contact {
+                width: 70%;
+                max-width: 200px;
+            }
+        }
+    }
+}

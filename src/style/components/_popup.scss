@@ -1,0 +1,15 @@
+.popup {
+    border-radius: 8px;
+
+    &__form {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+@media (max-width: $sm) {
+    .popup {
+        padding: 20px;
+        max-width: 100%;
+    }
+}

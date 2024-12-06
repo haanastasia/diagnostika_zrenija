@@ -1,0 +1,18 @@
+{
+  "name": "diagnostika_zrenija",
+  "version": "1.0.0",
+  "author": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.6.2",
+    "fancybox": "3",
+    "owl.carousel": "^2.3.4"
+  }
+}

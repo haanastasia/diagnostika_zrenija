@@ -1,0 +1,127 @@
+.nav {
+    &--white {
+        .nav__link {
+            color: white;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 22px;
+        position: relative;
+        display: block;
+    }
+
+    &-main {
+        background-color: #6eb744;
+        position: relative;  
+        z-index: 2;
+        width: calc(100% - 61px);
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item {
+            padding: 20px 0px;
+            position: relative;
+
+            &:not(:last-child) .nav__link {
+                border-right: 1px solid rgba($text-primary, 0.2);
+            }
+        }
+
+        &__link {
+            padding: 4px 28px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0px;
+                right: 0px;
+                margin: auto;
+                width: 0px;
+                height: 0px;
+                background-color: white;
+                opacity: 0;
+                transition: all ease 0.4s;
+            }
+
+            &:hover:before {
+                width: 60px;
+                max-width: 90%;
+                height: 1px;
+                opacity: 1;
+            }
+        }
+
+        &__navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .nav {
+        &__link {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &-main {
+            &__link {
+                padding: 4px 15px;
+            }
+
+            &__item {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .nav {
+        &-main {
+            &__navbar-collapse {
+                position: absolute;
+                background: $primary-color-active;
+                z-index: 9;
+                top: 100%;
+                width: 100%;
+            }
+
+            &__list {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &__link {
+                padding: 10px 20px;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &__item {
+                width: 100%;
+                padding: 0px;
+
+                &:not(:last-child) .nav__link {
+                    border-right: 0px;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+}

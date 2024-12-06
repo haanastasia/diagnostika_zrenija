@@ -1,0 +1,35 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 20px 0px 0px;
+    margin-bottom: $space;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 22px;
+        position: relative;
+
+        &:not(:last-child):after {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 10px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDcgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGlkPSJhcnJvdyBpY29uIiBvcGFjaXR5PSIwLjMiPgo8cGF0aCBpZD0iYXJyb3cgaWNvbl8yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTYuMjUgNS4wMDE2OEwzLjEyNSAwSDAuMTI5ODM4TDMuMjc0ODIgNS4wMDE2OEwwIDEwSDMuMTI1TDYuMjUgNS4wMDE2OFoiIGZpbGw9IiMzNzQ1NEEiLz4KPC9nPgo8L3N2Zz4K);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin: 0px 8px;
+        }
+    }
+
+    &__link {
+        &:hover {
+            svg path {
+                stroke: $primary-color-active;
+            }
+        }
+    }
+}

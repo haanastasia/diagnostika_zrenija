@@ -1,0 +1,221 @@
+.footer {
+    &__logo {
+        width: 200px;
+        margin-bottom: 10px;
+        top: -15px;
+        position: relative;
+    }
+
+    &-list {
+        &__link {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            color: rgba($text-primary, 0.6);
+        }
+    }
+
+    &__column {
+        padding: 0 10px;
+        max-width: 186px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+
+    &__caption {
+        font-size: 18px;
+        font-weight: 700;
+        max-width: 260px;
+        padding-right: 20px;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &--highlight {
+            background-color: $second-color;
+        }
+
+        &--navigation {
+            padding: 40px 0px;
+        }
+
+        &--shadow {
+            box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &-info {
+        height: 100%;
+        padding-right: $space;
+        border-right: 1px solid $stroke-color;
+
+        &__contact {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $stroke-color;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            color: rgba($text-primary, 0.6);
+        }
+    }
+
+    &__copyright {
+        padding: $space 0px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba($text-primary, 0.6);
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-decoration-line: underline;
+            color: rgba($text-primary, 0.6);
+
+            &:hover {
+                color: $text-primary;
+            }
+        }
+    }
+
+    &__menu-group {
+        padding-left: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__form-group,
+    &__social-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 21px 0px;
+    }
+
+    &__social-group {
+        justify-content: flex-end;
+        padding-left: 20px;
+        height: 100%;
+    }
+
+    &__form-group {
+        padding-right: 50px;
+        border-right: 1px solid $second-color;
+        height: 100%;
+    }
+}
+
+@media (max-width: $md) {
+    .footer {
+        &__column {
+            margin-bottom: 20px;
+        }
+
+        &__caption {
+            font-size: 16px;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &__form-group {
+            flex-wrap: wrap;
+        }
+
+        &__menu-group {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .footer {
+        &__title {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        
+        &__list {
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        &-list {
+            &__link {
+                font-size: 12px;
+                line-height: 22px;
+            }
+        }
+
+        &-info {
+            padding-right: 0px;
+            border-right: 0px solid #dfdfdf;
+            margin-bottom: 30px;
+
+            &__contact {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+        }
+
+        &__menu-group {
+            padding-left: 0px;
+        }
+
+        &__column {
+            width: 22%;
+            max-width: 100px;
+            padding: 0;
+        }
+        &__form-group {
+            padding-bottom: 0px;
+        }
+
+        &__form-group,
+        &__social-group {
+            padding-right: 0px;
+            padding-left: 0px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border-right: 0px;
+        }
+
+        &__copyright {
+            padding: 20px 0;
+        }
+
+        &__logo {
+            width: 150px;
+            max-width: 100%;
+            margin: 0px auto 10px;
+        }
+
+    }
+}
+
+@media (max-width: $xs) {
+    .footer {
+        &__column {
+            width: 48%;
+            max-width: 200px;
+        }
+    }
+}
